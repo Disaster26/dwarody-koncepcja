@@ -1,4 +1,4 @@
-/* Dwa Rody - motyw WordPress wg wizualizacji (disaster26.github.io/dwarody-koncepcja). Wykonanie: Wylinka. */
+/* Dwa Rody - motyw WordPress, v1.1.0: układ i menu dotychczasowej strony dwarody.pl, odświeżony wygląd. Wykonanie: Wylinka. */
 
 /* czcionki lokalnie (Source Serif 4, Source Sans 3 - licencja OFL) */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/sourceserif4-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -78,26 +78,9 @@ p{margin:0 0 1em}
 .link-strz:hover::after{transform:translateX(3px)}
 
 /* motyw: lacznik rodowy */
-.lacznik path,.znak path,.spotkanie-linie path{fill:none;stroke:var(--czerwien);stroke-width:2}
+.lacznik path,.znak path{fill:none;stroke:var(--czerwien);stroke-width:2}
 .lacznik circle{fill:var(--czerwien)}
 .znak{width:44px;height:22px;display:block;margin-bottom:14px}
-
-/* hero */
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);min-height:calc(100svh - var(--head));background:#fff}
-.admin-bar .hero{min-height:calc(100svh - var(--head) - 32px)}
-.hero-foto{margin:0;position:relative;order:2;overflow:hidden;background:#cdbf9c}
-.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%}
-.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,0) 30%)}
-.hero-in{order:1;display:flex;flex-direction:column;justify-content:center;padding:48px 56px 48px max(20px,calc((100vw - 1320px)/2));position:relative}
-.hero h1{font-size:clamp(34px,3.4vw,54px);max-width:15ch;letter-spacing:-.01em}
-.lead{font-size:clamp(18px,1.35vw,21px);color:var(--szary);max-width:36em;margin:22px 0 30px}
-.hero-akcje{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
-.nw{white-space:nowrap}
-.herb-para{display:flex;align-items:flex-start;gap:0;margin-bottom:30px}
-.herb-para img{height:76px;width:auto;flex:none}
-.herb-para svg{width:120px;height:46px;margin:0 6px;flex:none}
-.herb-para path{fill:none;stroke:var(--czerwien);stroke-width:2}
-.herb-para circle{fill:var(--czerwien)}
 
 /* sekcje */
 .sekcja{padding:88px 0}
@@ -105,83 +88,6 @@ p{margin:0 0 1em}
 .naglowek{max-width:760px;margin-bottom:44px}
 .naglowek h2{font-size:clamp(28px,3vw,40px)}
 .naglowek p{color:var(--szary);margin-top:14px}
-
-/* drzewa */
-.drzewa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.rod{border:1px solid var(--linia);border-top:3px solid var(--czerwien);padding:32px;background:#fff;display:flex;flex-direction:column}
-.rod-gora{display:flex;align-items:center;gap:18px;margin-bottom:26px}
-.rod-gora img{height:84px;width:auto;flex:none}
-.rod h3{font-size:clamp(22px,2vw,27px)}
-.rod-alias{color:var(--szary);margin:4px 0 0;font-size:16px}
-.mini-drzewo{list-style:none;margin:0 0 28px;padding:0 0 0 22px;position:relative;flex:1}
-.mini-drzewo::before{content:"";position:absolute;left:5px;top:12px;bottom:14px;width:2px;background:var(--czerwien)}
-.mini-drzewo li{position:relative;padding:0 0 14px;color:var(--szary);font-size:17px;line-height:1.45}
-.mini-drzewo li::before{content:"";position:absolute;left:-22px;top:10px;width:14px;height:2px;background:var(--czerwien)}
-.mini-drzewo li:last-child{padding-bottom:0}
-.mini-drzewo b{color:var(--atrament);font-weight:600}
-.sym{color:var(--czerwien);font-weight:600;font-size:15px}
-.rod-akcje{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
-
-/* spotkanie rodow */
-.spotkanie{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;max-width:900px;margin:0 auto 64px}
-.osoba{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--linia);padding:16px 20px;min-width:0}
-.osoba img{height:62px;width:auto;flex:none}
-.osoba b{display:block;font-family:var(--serif);font-size:19px;color:var(--atrament);line-height:1.25}
-.osoba span{display:block;color:var(--szary);font-size:15px;line-height:1.4;margin-top:2px}
-.spotkanie-linie{grid-column:1 / -1;width:100%;height:56px;display:block}
-.osoba-s{grid-column:1 / -1;justify-self:center;border-color:var(--czerwien);text-align:center;padding:16px 30px}
-.o-mnie{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:start}
-.o-mnie-tekst p{font-size:18px}
-.o-mnie-tytul{font-size:24px;margin-bottom:16px}
-.o-mnie .ramka{position:sticky;top:calc(var(--head) + 24px)}
-blockquote{margin:28px 0 0;padding:0 0 0 22px;border-left:2px solid var(--czerwien);font-family:var(--serif);font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--atrament)}
-blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);font-style:normal;margin-top:10px}
-.ramka{margin:0;background:#fff;padding:12px;border:1px solid var(--linia)}
-.ramka figcaption{font-size:15px;color:var(--szary);padding:10px 4px 2px}
-
-/* herby */
-.herby{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
-.herb{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:28px;align-items:start}
-.herb-foto{margin:0;border:1px solid var(--linia);padding:10px;background:#fff}
-.herb h3{font-size:30px;margin-bottom:12px}
-.herb p{color:var(--szary)}
-.herb blockquote{font-size:19px;margin:6px 0 18px}
-.pod-tytul{font-size:22px;margin:72px 0 22px}
-
-/* karuzela */
-.karuzela{position:relative}
-.kar-tor{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;outline:none;padding-bottom:4px}
-.kar-tor::-webkit-scrollbar{display:none}
-.kar-tor.ciagnie{cursor:grabbing;scroll-snap-type:none}
-.kar-tor.ciagnie img{pointer-events:none}
-.kar-tor figure{margin:0;flex:0 0 clamp(240px,30%,360px);scroll-snap-align:start;user-select:none}
-.kar-img{height:240px;background:#fff;border:1px solid var(--linia);display:flex;align-items:center;justify-content:center;padding:14px}
-.kar-img img{max-height:100%;width:auto;object-fit:contain}
-.karuzela-dok .kar-tor figure{flex-basis:clamp(270px,38%,460px)}
-.karuzela-dok .kar-img{height:280px;padding:0;overflow:hidden}
-.karuzela-dok .kar-img img{width:100%;height:100%;max-height:none;object-fit:cover}
-.karuzela-dok .kar-img.caly{padding:14px;background:#fff}
-.karuzela-dok .kar-img.caly img{object-fit:contain}
-.kar-tor figcaption{font-size:15px;color:var(--szary);padding-top:10px;line-height:1.45}
-.kar-strz{position:absolute;top:120px;transform:translateY(-50%);z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid var(--linia);background:#fff;color:var(--atrament);font-size:28px;line-height:1;cursor:pointer;opacity:0;transition:opacity .2s;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.karuzela-dok .kar-strz{top:140px}
-.kar-l{left:-14px}.kar-p{right:-14px}
-.karuzela:hover .kar-strz,.kar-strz:focus-visible{opacity:1}
-.kar-strz[disabled]{opacity:0!important;pointer-events:none}
-.kar-licznik{font-size:15px;color:var(--szary);margin:12px 0 0}
-
-/* zrodla */
-.zrodla{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px;border-top:1px solid var(--linia)}
-.zrodla li{border-bottom:1px solid var(--linia)}
-.zrodla a{display:block;padding:18px 0;text-decoration:none}
-.zrodla b{display:block;font-family:var(--serif);font-size:20px;color:var(--atrament);font-weight:600}
-.zrodla span{display:block;color:var(--szary);font-size:16px;margin-top:3px}
-.zrodla a:hover b{color:var(--czerwien)}
-
-/* rody */
-.rody{list-style:none;margin:0 0 30px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--linia)}
-.rody li{padding:16px 12px 16px 0;border-bottom:1px solid var(--linia);color:var(--szary);font-size:16px}
-.rody b{display:block;font-family:var(--serif);font-size:19px;color:var(--atrament);font-weight:600}
 
 /* kontakt */
 .sekcja-ciemna{background:var(--atrament);color:#D9DCE0}
@@ -218,43 +124,42 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
 .okruszki a{color:var(--szary);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#B9BEC5}
 .okruszki a:hover{color:var(--czerwien)}
 @media (max-width:900px){.okruszki li:last-child{display:none}}
-.strona{padding:48px 0 64px}
-.strona .wrap{max-width:900px}
+.strona{padding:36px 0 56px}
+.strona .wrap{max-width:1000px}
 .strona-drzewo .strona .wrap{max-width:1100px}
 .na-gore{margin:40px 0 0;font-weight:600}
 .na-gore a{text-decoration:none}
 .na-gore a::before{content:"\2191\00a0"}
-.drzewo-legenda{background:var(--tlo-szare);border-left:3px solid var(--czerwien);padding:14px 18px;margin:0 0 30px;font-size:17px}
+.drzewo-legenda{background:var(--tlo-szare);border-left:3px solid var(--czerwien);padding:10px 16px;margin:0 0 20px;font-size:16px;line-height:1.45}
 
-/* stara treść z edytora: czytelnie, duży tekst, bez rozjeżdżania na telefonie */
-.tresc{font-size:19px;line-height:1.7;overflow-wrap:break-word}
+/* stara treść z edytora: zwarta jak na dotychczasowej stronie (interlinia 1.5, akapity bez dodatkowych odstępów;
+   puste akapity &nbsp; z panelu dają odstęp tam, gdzie autor go wstawił) */
+.tresc{font-size:18px;line-height:1.5;overflow-wrap:break-word}
 .tresc>*:first-child{margin-top:0}
-.tresc h2,.tresc h3,.tresc h4{margin:1.6em 0 .6em;line-height:1.25}
-.tresc h2{font-size:28px}.tresc h3{font-size:24px}.tresc h4{font-size:22px}
-.tresc p,.tresc ul,.tresc ol{margin:0 0 1em}
-.tresc ul,.tresc ol{padding-left:1.3em}
+.tresc h2,.tresc h3,.tresc h4{margin:.9em 0 .4em;line-height:1.3}
+.tresc h2{font-size:26px}.tresc h3{font-size:23px}.tresc h4{font-size:20px}
+.tresc p{margin:0}
+.tresc ul,.tresc ol{margin:0 0 .5em;padding-left:1.3em}
 .tresc a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 .tresc a:hover{color:var(--czerwien-ciemna);text-decoration-thickness:2px}
 .tresc img{max-width:100%;height:auto;display:inline-block;vertical-align:middle}
-.tresc .aligncenter,.tresc img.aligncenter{display:block;margin:1em auto}
-.tresc .alignleft{float:left;margin:.3em 1.4em 1em 0;max-width:50%}
-.tresc .alignright{float:right;margin:.3em 0 1em 1.4em;max-width:50%}
-.tresc .alignnone{margin:.4em 0}
+.tresc .aligncenter,.tresc img.aligncenter{display:block;margin:.6em auto}
+.tresc .alignleft{float:left;margin:.3em 1.2em .6em 0;max-width:50%}
+.tresc .alignright{float:right;margin:.3em 0 .6em 1.2em;max-width:50%}
+.tresc .alignnone{margin:.3em 0}
 .tresc::after{content:"";display:table;clear:both}
-.tresc a img{border:1px solid var(--linia);padding:4px;background:#fff;transition:border-color .15s}
-.tresc a:hover img{border-color:var(--czerwien)}
-.tresc figure,.tresc .wp-caption{max-width:100%!important;margin:1em 0}
-.tresc .wp-caption-text,.tresc figcaption{font-size:16px;color:var(--szary);margin-top:6px}
-.tresc hr{border:0;border-top:1px solid var(--linia);margin:2em 0}
-.tresc blockquote{font-size:20px}
+.tresc figure,.tresc .wp-caption{max-width:100%!important;margin:.6em 0}
+.tresc .wp-caption-text,.tresc figcaption{font-size:16px;color:var(--szary);margin-top:4px}
+.tresc hr{border:0;border-top:1px solid var(--linia);margin:1.2em 0}
+.tresc blockquote{font-size:19px;margin:.6em 0}
 /* rozmiary pisma wpisane w starym edytorze ("small", "xx-small") - na stronie zawsze czytelne */
 .tresc [style*="font-size: small"],.tresc [style*="font-size:small"],.tresc [style*="font-size: x-small"],.tresc [style*="font-size: smaller"]{font-size:inherit!important}
 .tresc [style*="font-size: xx-small"],.tresc [style*="font-size:xx-small"]{font-size:.86em!important}
 .tresc .small-text{font-size:.9em;color:var(--szary)}
 .tresc [style*="color: #000000"]{color:inherit!important}
-/* bloki <pre> ze starego edytora (spisy z ikonami i podpisami): zawijanie zamiast wychodzenia poza ekran */
-.tresc pre{font:inherit;white-space:pre-wrap;overflow-wrap:break-word;margin:0 0 1.2em;background:none;padding:0;max-width:100%}
-.tresc pre[style*="center"]{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:18px;border:1px solid var(--linia);border-radius:4px;background:#fff}
+/* bloki <pre> ze starego edytora: pismo o stałej szerokości jak na dotychczasowej stronie; zawijane, żeby nie wychodziły poza ekran */
+.tresc pre{font:14px/1.5 Consolas,"Courier New",monospace;white-space:pre-wrap;overflow-wrap:break-word;margin:.6em 0 1em;padding:14px 18px;background:#fff;border:1px solid var(--linia);border-radius:6px;max-width:100%;color:var(--tekst)}
+.tresc pre[style*="center"]{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
 /* odnośniki do plików PDF */
 .tresc a[href$=".pdf" i]{font-weight:600}
 .tresc a[href$=".pdf" i]::after{content:"PDF";display:inline-block;margin-left:.4em;padding:1px 5px 0;border:1px solid currentColor;border-radius:3px;font:600 11px/1.5 var(--sans);letter-spacing:.04em;vertical-align:.18em;text-decoration:none}
@@ -274,17 +179,11 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
 .tresc table img{max-width:none}
 .tresc tr:first-child td{background:var(--tlo-szare);font-weight:600}
 .tresc table[border="0"] tr:first-child td{background:none;font-weight:inherit}
-/* drzewo genealogiczne: każda osoba w osobnym wierszu, wcięcie wg pokolenia (dodawane skryptem) */
-.strona-drzewo .tresc{font-size:18px}
-.strona-drzewo .tresc p{line-height:1.75}
-.dr-linia{position:relative;padding:5px 0 5px calc(var(--g,0) * min(1.5em, 3vw) + 1.6em);text-indent:-1.6em;border-bottom:1px solid #EEF0F2;line-height:1.55}
-.dr-linia:hover{background:#FAFAFB}
-.dr-linia::before{content:"";position:absolute;top:0;bottom:0;left:calc(var(--g,0) * min(1.5em, 3vw) - .7em);width:2px;background:rgba(184,30,28,.18)}
-.dr-linia[style*="--g:0"]::before{display:none}
-.dr-linia.dr-g0{margin-top:14px;border-top:2px solid var(--linia)}
-.dr-nr{color:var(--szary);font-size:.86em;font-variant-numeric:tabular-nums;margin-right:.3em}
-.dr-linia a{text-decoration:none;font-weight:600}
-.dr-linia a:hover{text-decoration:underline}
+/* drzewo genealogiczne: wiersze 1:1 jak w treści z panelu (bez wcięć dodawanych przez motyw), zwarte */
+.strona-drzewo .tresc{font-size:16px;line-height:1.5}
+.strona-drzewo .tresc p{line-height:1.5;margin:0}
+.strona-drzewo .tresc a{text-decoration:none;font-weight:600}
+.strona-drzewo .tresc a:hover{text-decoration:underline}
 .tresc-ciemna{color:#D9DCE0}
 .tresc-ciemna a{color:#fff}
 .tresc-ciemna strong{color:#fff}
@@ -315,13 +214,6 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
 .stopka-dol{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--linia);margin-top:26px;padding-top:18px}
 .stopka-dol a{color:var(--szary)}
 
-/* niskie ekrany komputerow */
-@media (min-width:1101px) and (max-height:820px){
-  .hero h1{font-size:clamp(32px,3vw,44px)}
-  .lead{margin:16px 0 22px}
-  .herb-para{margin-bottom:20px}.herb-para img{height:60px}
-}
-
 /* tablet: menu w panelu */
 @media (max-width:1100px){
   :root{--head:64px}
@@ -346,9 +238,6 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
   .menu .m-pod .m-pod a{padding-left:34px}
   .menu .m-lista>.m-cta{border-bottom:0}
   .menu .m-lista>.m-cta>a{margin:18px 0 0;justify-content:center;padding:15px;color:#fff}
-  .herby{grid-template-columns:1fr;gap:44px}
-  .rody{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .zrodla{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:782px){.admin-bar .top{top:46px}}
 @media (max-width:600px){.admin-bar .top{top:0}}
@@ -358,42 +247,7 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
   :root{--head:60px}
   .logo img{height:38px}
   .logo .logo-napis{height:40px}
-  .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--head))}
-  .hero-foto{order:1;flex:1 1 0;min-height:min(56vw,26svh);max-height:52svh;align-self:stretch;width:100%}
-  .hero-foto img{object-position:0% 78%}
-  .hero-foto::after{background:linear-gradient(180deg,rgba(255,255,255,0) 55%,#fff 100%)}
-  .hero-in{order:2;flex:0 0 auto;padding:6px 20px 22px}
-  .hero h1{font-size:clamp(26px,min(7.4vw,4.4svh),36px);max-width:none}
-  .lead{font-size:clamp(16px,min(4.4vw,2.5svh),18px);margin:12px 0 24px;line-height:1.5}
-  .hero-akcje{flex-direction:column;align-items:stretch;gap:12px}
-  .hero-akcje .btn{width:100%}
-  .hero-akcje .link-strz{justify-content:center;min-height:32px}
-  .herb-para{display:none}
   .sekcja{padding:60px 0}
-  .naglowek{margin-bottom:30px}
-  .drzewa{grid-template-columns:1fr;gap:22px}
-  .rod{padding:24px 20px}
-  .rod-gora img{height:66px}
-  .rod-akcje{flex-direction:column;align-items:stretch}
-  .rod-akcje .link-strz{justify-content:center}
-  .spotkanie{column-gap:12px;margin-bottom:44px}
-  .osoba{flex-direction:column;text-align:center;padding:14px 10px;gap:8px}
-  .osoba img{height:50px}
-  .osoba b{font-size:17px}
-  .osoba span{font-size:14px}
-  .spotkanie-linie{height:44px}
-  .o-mnie{grid-template-columns:1fr;gap:34px}
-  .o-mnie .ramka{position:static}
-  .herb{grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:18px}
-  .herb h3{font-size:26px}
-  .pod-tytul{margin-top:52px}
-  .kar-tor figure{flex-basis:78%}
-  .karuzela-dok .kar-tor figure{flex-basis:84%}
-  .kar-img{height:210px}
-  .karuzela-dok .kar-img{height:230px}
-  .kar-strz{display:none}
-  .zrodla{grid-template-columns:1fr}
-  .rody{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kontakt{grid-template-columns:1fr;gap:34px}
   .formularz{padding:22px 18px}
   .formularz .btn{justify-self:stretch}
@@ -403,9 +257,11 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
   .glowka h1{font-size:clamp(26px,7vw,34px)}
   .okruszki ol{font-size:15px;margin-bottom:8px}
   .strona{padding:30px 0 48px}
-  .tresc{font-size:18px}
+  .tresc{font-size:17px}
+  .strona-drzewo .tresc{font-size:15px}
+  .tresc pre{font-size:13px;padding:12px 12px}
   .tresc [style*="justify"]{text-align:left!important}
-  .tresc .alignleft,.tresc .alignright{float:none;margin:1em 0;max-width:100%}
+  .tresc .alignleft,.tresc .alignright{float:none;margin:.6em 0;max-width:100%}
   .tresc h2{font-size:24px}.tresc h3{font-size:22px}.tresc h4{font-size:20px}
   .stopka-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
   .stopka-marka{flex-direction:column;gap:10px}
@@ -413,9 +269,7 @@ blockquote cite{display:block;font:500 15px/1.4 var(--sans);color:var(--szary);f
   .stopka-dol{flex-wrap:wrap}
 }
 @media (max-width:560px){
-  .herb{grid-template-columns:1fr}
-  .herb-foto{max-width:200px}
   .glowka-oba .glowka-herby img+img{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-@media print{.top,.stopka,.dzial,.na-gore,.kar-strz{display:none!important}.glowka{background:none}}
+@media print{.top,.stopka,.dzial,.na-gore{display:none!important}.glowka{background:none}}
