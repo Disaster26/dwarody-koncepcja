@@ -1,4 +1,4 @@
-/* Dwa Rody - motyw WordPress, v1.2.1: układ i menu dotychczasowej strony dwarody.pl, odświeżony wygląd. Wykonanie: Wylinka. */
+/* Dwa Rody - motyw WordPress, v1.4.0: układ i menu dotychczasowej strony dwarody.pl, odświeżony wygląd. Wykonanie: Wylinka. */
 
 /* czcionki lokalnie (Source Serif 4, Source Sans 3 - licencja OFL) */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/sourceserif4-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -153,8 +153,6 @@ p{margin:0 0 1em}
 .tresc hr{border:0;border-top:1px solid var(--linia);margin:1.2em 0}
 .tresc blockquote{font-size:18px;margin:.6em 0}
 /* rozmiary pisma wpisane w starym edytorze ("small", "xx-small") - na stronie zawsze czytelne */
-.tresc [style*="font-size: small"],.tresc [style*="font-size:small"],.tresc [style*="font-size: x-small"],.tresc [style*="font-size: smaller"]{font-size:inherit!important}
-.tresc [style*="font-size: xx-small"],.tresc [style*="font-size:xx-small"]{font-size:.86em!important}
 .tresc .small-text{font-size:.9em;color:var(--szary)}
 .tresc [style*="color: #000000"]{color:inherit!important}
 /* bloki <pre> ze starego edytora: pismo o stałej szerokości jak na dotychczasowej stronie; zawijane, żeby nie wychodziły poza ekran */
@@ -168,7 +166,7 @@ p{margin:0 0 1em}
 /* tabele: przewijane w bok w swoim kontenerze */
 .tabela-przewin{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 1.4em;max-width:100%;border:1px solid var(--linia);border-radius:4px;background:#fff}
 .tabela-przewin:focus-visible{outline:2px solid var(--czerwien)}
-.tresc table{border-collapse:collapse;width:auto!important;min-width:100%;height:auto!important;font-size:17px;line-height:1.45}
+.tresc table{border-collapse:collapse;width:auto!important;min-width:100%;font-size:17px;line-height:1.45}
 .tresc td,.tresc th{border:1px solid var(--linia);padding:8px 12px;vertical-align:top;text-align:left}
 .tresc table[border="0"] td{border-color:transparent}
 /* tabele układu (bez ramek, np. pieczęcie obok siebie): zawsze w szerokości ekranu, zdjęcia się zmniejszają */
@@ -260,7 +258,6 @@ p{margin:0 0 1em}
   .tresc{font-size:16px}
   .strona-drzewo .tresc{font-size:15px}
   .tresc pre{font-size:13px;padding:12px 12px}
-  .tresc [style*="justify"]{text-align:left!important}
   .tresc .alignleft,.tresc .alignright{float:none;margin:.6em 0;max-width:100%}
   .tresc h2{font-size:22px}.tresc h3{font-size:20px}.tresc h4{font-size:18px}
   .stopka-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
@@ -363,9 +360,6 @@ p{margin:0 0 1em}
 .omnie .tytul-sekcji{margin-bottom:34px}
 .tresc-czytaj{font-size:17px;line-height:1.65}
 .tresc-glowna p{margin:0 0 .6em}
-.tresc-glowna>p:first-child::first-letter{float:left;font:700 4.05em/.8 var(--serif);color:var(--czerwien);margin:.07em .1em 0 0;padding:0}
-.tresc-glowna>p:last-child[style*="right"]{margin:1.3em 0 0;font:italic 600 21px/1.3 var(--serif);color:var(--granat)}
-.tresc-glowna>p:last-child[style*="right"]::before{content:"";display:block;width:120px;height:2px;margin:0 0 12px auto;background:linear-gradient(90deg,var(--czerwien),var(--zloto))}
 
 /* apel o informacje */
 .apel{background:var(--czerwien);color:#fff;padding:64px 0;text-align:center}
@@ -458,8 +452,6 @@ a.skrot-imie:hover{text-decoration-thickness:2px}
   .karta-glowa img{height:84px}
   .karta-rodu li a{font-size:17px}
   .tresc-czytaj,.strona .tresc-czytaj{font-size:16px}
-  .tresc-glowna>p:first-child::first-letter{font-size:3.7em}
-  .tresc-glowna>p:last-child[style*="right"]{font-size:19px}
   .apel{padding:48px 0}
   .apel-tekst{font-size:16px}
   .apel .btn{width:100%}
@@ -481,7 +473,6 @@ a.skrot-imie:hover{text-decoration-thickness:2px}
 /* v1.2.0 poprawki po przeglądzie zrzutów */
 h1,h2,.start-pod,.apel-cytat{text-wrap:balance}
 .nw{white-space:nowrap}
-.tresc-czytaj{hyphens:auto;-webkit-hyphens:auto}
 .skrot-nr span{padding:0 8px}
 body:not(.strona-drzewo) .glowka .wrap{width:min(820px,100% - 40px)}
 .karty-rodow{align-items:stretch}
@@ -550,3 +541,106 @@ body:not(.strona-drzewo) .glowka .wrap{width:min(820px,100% - 40px)}
   .tresc .dr-linia p{padding-left:1.4em;text-indent:-1.4em}
   .tresc .dr-linia p[style*="padding-left"]{padding-left:2.4em!important}
 }
+
+/* ================================================================ v1.4.0: SKŁAD JAK W ORYGINALE
+   Uwaga autora (14.11): zmiana kroju i wielkości pisma szatkowała zdania. Od tej wersji treść stron ma krój, wielkość,
+   interlinię i szerokość kolumny jak na dotychczasowej stronie dwarody.pl (motyw Iconic One / Twenty Twelve):
+   Ubuntu 14 px, interlinia 24 px, kolumna 996 px, kolor #444, odnośniki #B71A1A; rozmiary wpisane w edytorze
+   ("small" = 13 px, "xx-small" = 9 px) działają jak w oryginale. Teksty przysłane jako pliki Word/RTF (.dr-dok)
+   mają krój, stopień i szerokość kolumny z dokumentu autora (Times New Roman / Verdana, 10-11 pt, szerokość tekstu strony A4).
+   Bez dzielenia wyrazów, bez wymuszonych złamań; ostatni wiersz akapitu bez samotnego wyrazu (text-wrap:pretty);
+   twarde spacje po jednoliterowych spójnikach i skrótach dokłada inc/tresc.php przy wyświetlaniu. */
+@font-face{font-family:"Ubuntu DR";font-style:normal;font-weight:400;font-display:swap;src:local("Ubuntu"),local("Ubuntu-Regular"),url(../fonts/ubuntu-400-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Ubuntu DR";font-style:normal;font-weight:400;font-display:swap;src:local("Ubuntu"),local("Ubuntu-Regular"),url(../fonts/ubuntu-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Ubuntu DR";font-style:normal;font-weight:700;font-display:swap;src:local("Ubuntu Bold"),local("Ubuntu-Bold"),url(../fonts/ubuntu-700-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Ubuntu DR";font-style:normal;font-weight:700;font-display:swap;src:local("Ubuntu Bold"),local("Ubuntu-Bold"),url(../fonts/ubuntu-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Times New Roman z systemu; gdzie go nie ma (Android, Linux) - Tinos o identycznych szerokościach znaków (te same złamania wierszy) */
+@font-face{font-family:"Times DR";font-style:normal;font-weight:400;font-display:swap;src:local("Times New Roman"),local("TimesNewRomanPSMT"),url(../fonts/tinos-400-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Times DR";font-style:normal;font-weight:400;font-display:swap;src:local("Times New Roman"),local("TimesNewRomanPSMT"),url(../fonts/tinos-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Times DR";font-style:normal;font-weight:700;font-display:swap;src:local("Times New Roman Bold"),local("TimesNewRomanPS-BoldMT"),url(../fonts/tinos-700-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Times DR";font-style:normal;font-weight:700;font-display:swap;src:local("Times New Roman Bold"),local("TimesNewRomanPS-BoldMT"),url(../fonts/tinos-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Times DR";font-style:italic;font-weight:400;font-display:swap;src:local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),url(../fonts/tinos-400i-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Times DR";font-style:italic;font-weight:400;font-display:swap;src:local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),url(../fonts/tinos-400i-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Times DR";font-style:italic;font-weight:700;font-display:swap;src:local("Times New Roman Bold Italic"),local("TimesNewRomanPS-BoldItalicMT"),url(../fonts/tinos-700i-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Times DR";font-style:italic;font-weight:700;font-display:swap;src:local("Times New Roman Bold Italic"),local("TimesNewRomanPS-BoldItalicMT"),url(../fonts/tinos-700i-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--oryg-kroj:"Ubuntu DR",Ubuntu,Helvetica,Arial,sans-serif;--oryg-tekst:#444;--oryg-link:#B71A1A;--oryg-kolumna:996px}
+
+/* kolumna treści: 996 px jak na dotychczasowej stronie (na telefonie cała szerokość z marginesem 20 px) */
+.strona .wrap,body:not(.strona-drzewo) .strona .wrap,.strona-drzewo .strona .wrap{width:min(var(--oryg-kolumna),100% - 40px);max-width:none}
+body:not(.strona-drzewo) .glowka .wrap{width:min(var(--oryg-kolumna),100% - 40px)}
+.czytaj{max-width:var(--oryg-kolumna)}
+
+/* treść: Ubuntu 14/24, #444, akapity bez odstępów (jak w oryginale) */
+.tresc,.tresc-czytaj,.strona .tresc-czytaj,.strona-drzewo .tresc{font:400 14px/24px var(--oryg-kroj);color:var(--oryg-tekst);letter-spacing:normal;word-spacing:normal;hyphens:manual;-webkit-hyphens:manual;overflow-wrap:break-word}
+.tresc p,.strona-drzewo .tresc p,.tresc-glowna p{margin:0;line-height:24px;text-wrap:pretty;orphans:2;widows:2}
+.tresc li{text-wrap:pretty}
+.tresc strong,.tresc b{font-weight:700}
+.tresc h1,.tresc h2,.tresc h3,.tresc h4,.tresc h5,.tresc h6{font-family:var(--oryg-kroj);font-weight:700;color:var(--oryg-tekst);margin:24px 0;text-wrap:balance;letter-spacing:normal}
+.tresc h1{font-size:21px;line-height:1.5}.tresc h2{font-size:18px;line-height:1.6}.tresc h3{font-size:16px;line-height:1.846}
+.tresc h4{font-size:14px;line-height:1.846}.tresc h5{font-size:13px;line-height:1.846}.tresc h6{font-size:12px;line-height:1.846}
+.tresc sup,.tresc sub{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+.tresc sup{top:-.5em}.tresc sub{bottom:-.25em}
+.tresc a,.strona-drzewo .tresc a{color:var(--oryg-link);text-decoration:none;font-weight:inherit}
+.tresc a:hover,.strona-drzewo .tresc a:hover{color:var(--oryg-link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.tresc a:focus-visible{outline:2px solid var(--oryg-link);outline-offset:1px}
+.tresc a[href$=".pdf" i]{font-weight:inherit}
+.tresc a[href$=".pdf" i]::after{content:none;display:none}
+.tresc [style*="color: #000000"]{color:inherit!important}
+.tresc ul,.tresc ol{margin:0 0 24px;padding-left:24px;line-height:24px}
+.tresc blockquote{font-size:inherit;margin:0 0 24px;padding:0 0 0 24px}
+.tresc hr{border:0;border-top:1px solid #ededed;margin:24px 0}
+/* <pre> ze starego edytora: Consolas 12 px, #666 jak w oryginale; na wąskim ekranie zawijany */
+.tresc pre{font:12px/1.5143 Consolas,Monaco,"Lucida Console",monospace;color:#666;background:none;border:0;border-radius:0;padding:0;margin:24px 0;white-space:pre-wrap;overflow-wrap:break-word}
+.tresc pre[style*="center"]{display:block;text-align:center}
+/* tabele jak w oryginale: 12 px, interlinia 24 px, cienkie linie poziome */
+.tabela-przewin{border:0;border-radius:0;background:none;margin:0 0 24px}
+.tresc table{font-size:12px;line-height:2;border-bottom:1px solid #ededed;border-collapse:collapse}
+.tresc td,.tresc th{border:0;border-top:1px solid #ededed;padding:6px 10px 6px 0;vertical-align:top}
+.tresc tr:first-child td{background:none;font-weight:inherit}
+.tresc table[border="0"],.tresc table[border="0"] td{border-color:transparent}
+.tabela-podpowiedz{font-size:12px}
+/* zdjęcia i podpisy */
+.tresc .wp-caption-text,.tresc figcaption{font-size:12px;line-height:2;color:#757575;margin:0}
+.tresc .alignleft{margin:12px 24px 12px 0}.tresc .alignright{margin:12px 0 12px 24px}.tresc .aligncenter{margin:12px auto}
+/* strona główna: tekst "O mnie i o stronie" jak w oryginale (bez inicjału i ozdobnego podpisu) */
+.tresc-glowna>p:last-child[style*="right"]{margin:0}
+.drzewo-legenda{font:400 14px/24px var(--oryg-kroj);color:var(--oryg-tekst)}
+
+/* ---------------------------------------------------------------- dokumenty autora (Word / RTF) wstawione 1:1
+   <div class="dr-dok dok-tnr dok-pt10" style="max-width:718px"> ... </div>
+   krój i stopień z dokumentu; szerokość kolumny = szerokość tekstu na stronie dokumentu (A4 minus marginesy), więc
+   na komputerze wiersze łamią się tak jak w pliku autora; interlinia pojedyncza jak w Wordzie */
+.tresc .dr-dok{--dok-lh:1.15;font-size:13.333px;line-height:var(--dok-lh);color:#000;margin:0 auto;max-width:718px}
+.tresc .dr-dok p{line-height:var(--dok-lh)}
+.tresc .dr-dok.dok-tnr{font-family:"Times DR","Times New Roman",Tinos,"Liberation Serif",Times,serif}
+.tresc .dr-dok.dok-verdana{font-family:Verdana,"DejaVu Sans","Bitstream Vera Sans",Geneva,sans-serif;--dok-lh:1.215}
+.tresc .dr-dok.dok-pt10{font-size:13.333px}
+.tresc .dr-dok.dok-pt11{font-size:14.667px}
+.tresc .dr-dok.dok-pt12{font-size:16px}
+.tresc .dr-dok h1,.tresc .dr-dok h2,.tresc .dr-dok h3,.tresc .dr-dok h4{font-family:inherit;color:inherit}
+.tresc .dr-dok a{color:var(--oryg-link)}
+.tresc .dr-dok sup,.tresc .dr-dok sub{font-size:65%}
+
+/* telefon: ten sam krój i stopień; justowanie zamienione na wyrównanie do lewej (na wąskiej kolumnie justowanie bez
+   dzielenia wyrazów robi dziury między słowami) */
+@media (max-width:600px){
+  .tresc [style*="justify"]{text-align:left!important}
+  .tresc .dr-dok{max-width:none!important}
+}
+@media print{.tresc{color:#000}.tresc a{color:#000}}
+/* drzewo z pliku RTF autora (.dok-drzewo): na telefonie wiersz osoby, który się nie mieści, ma wcięcie wiszące (numer pokolenia zostaje z lewej) */
+@media (max-width:600px){.tresc .dr-dok.dok-drzewo p{padding-left:1.5em;text-indent:-1.5em}.tresc .dr-dok.dok-drzewo p[style*="center"]{padding-left:0;text-indent:0}}
+/* v1.4.0 - poprawki po przeglądzie grup (zgodność z Iconic One / Twenty Twelve) */
+.kontakt-tekst.tresc,.tresc-ciemna.tresc{color:#D9DCE0}
+.kontakt-tekst.tresc a{color:#fff}
+.kontakt-tekst p{font-size:inherit}
+.tresc pre{border:1px solid #ededed;border-radius:20px;padding:24px}
+.tresc pre img{box-shadow:0 1px 4px rgba(0,0,0,.1);margin:0 0 10px}
+.tresc table{color:#757575;margin-bottom:24px}
+.tresc td,.tresc th{padding:7px 14px}
+.tresc img.alignnone,.tresc img[class*="wp-image-"]:not(.aligncenter):not(.alignleft):not(.alignright){display:inline;vertical-align:baseline;margin:0 0 10px}
+.tresc img[class*="wp-image-"]{box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.tresc .small-text{font-size:inherit;color:inherit}
+/* drzewo z RTF: kolory autora (czarny / czerwony #FF0000 / niebieski) mają znaczenie, więc imię z biogramem zostaje w kolorze wiersza, odnośnik rozpoznawalny po cienkim podkreśleniu */
+.tresc .dr-dok.dok-drzewo a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.tresc .dr-dok.dok-drzewo a:hover{text-decoration-thickness:2px}

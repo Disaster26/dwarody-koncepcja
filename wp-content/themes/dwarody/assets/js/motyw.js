@@ -134,6 +134,18 @@
     }
     idz(tresc, false); nowa();
 
+    /* wiersz-kontynuacja (zaczyna się od odstępów, bez numeru, a wiersz wyżej urywa się na dywizie, przecinku, "+" albo niezamkniętym nawiasie) to dalszy ciąg wpisu - dołącz go; wyraz przeniesiony z dywizem ("Ewe-" + "lina") sklej */
+    var NUMER = /^(\d{1,3}(?:\s*[.,]\s*\d{1,3})*)\s*[.,]?\s*(?=[^\d\s.,])/;
+    linie = linie.reduce(function (acc, l) {
+      var pop = acc[acc.length - 1], t = l.t.replace(/ /g, ' ');
+      var p = pop ? pop.t.replace(/\s+$/, '') : '', n = t.replace(/^\s+/, '');
+      var urwany = /[-,;+(\[]$/.test(p) || (p.split('(').length > p.split(')').length) || (p.split('[').length > p.split(']').length);
+      if (pop && urwany && /^\s/.test(t) && !NUMER.test(t.trim()) && NUMER.test(pop.t.replace(/ /g, ' ').replace(/\s+/g, ' ').trim())) {
+        pop.t = /[a-ząćęłńóśźż]-$/.test(p) && /^[a-ząćęłńóśźż]/.test(n) ? p.slice(0, -1) + n : p + ' ' + n;
+      } else acc.push(l);
+      return acc;
+    }, []);
+
     var osoby = {}, kolej = [];
     linie.forEach(function (l) {
       var t = l.t.replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
