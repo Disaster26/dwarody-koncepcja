@@ -1,4 +1,4 @@
-/* Dwa Rody - motyw WordPress, v1.2.0: układ i menu dotychczasowej strony dwarody.pl, odświeżony wygląd. Wykonanie: Wylinka. */
+/* Dwa Rody - motyw WordPress, v1.2.1: układ i menu dotychczasowej strony dwarody.pl, odświeżony wygląd. Wykonanie: Wylinka. */
 
 /* czcionki lokalnie (Source Serif 4, Source Sans 3 - licencja OFL) */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400 700;font-display:swap;src:url(../fonts/sourceserif4-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -497,3 +497,39 @@ body:not(.strona-drzewo) .glowka .wrap{width:min(820px,100% - 40px)}
   .start-in{width:calc(100% - 40px)}
 }
 @media (max-width:900px){.skrot-os{scroll-padding-left:16px}}
+/* v1.2.1: schemat "Gdzie spotykają się dwa rody" na telefonie i tablecie (desktop bez zmian).
+   Małżeństwo jako klamra pod kartami Leona i Heleny: "+" w wolnym miejscu pod przerwą między kartami, linia z "+" w dół do Witolda. */
+@media (max-width:900px){
+  .sch{--g:28px;--klamra:30px;--c1:4;--c2:4;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .sch-para{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-bottom:calc(var(--klamra) + 16px)}
+  .sch-rod{font-size:17px;padding:10px 8px;gap:6px}
+  .sch-rod img{height:52px}
+  .sch-os{font-size:16px;padding:12px 10px}
+  .sch-os b{font-size:18px;line-height:1.25}
+  .sch-os small{font-size:16px}
+  .sch-i{font-size:17px}
+  .sch-kreska{height:22px}
+  .sch-para .sch-os{position:relative}
+  /* krótkie pionowe kreski z dołu kart Leona i Heleny */
+  .sch-para .sch-os::after{content:"";position:absolute;top:100%;left:50%;width:2px;margin-left:-1px;height:var(--klamra);background:var(--zloto)}
+  .sch-para .sch-os-s::after,.sch-para .sch-os-g::after{margin-top:2px}
+  /* pozioma belka klamry między środkami kolumn */
+  .sch-para::before{top:auto;bottom:16px;margin:0 0 -1.5px;height:3px;left:calc((100% - var(--g)) / var(--c1));right:calc((100% - var(--g)) / var(--c2));width:auto}
+  /* "+" na belce, w wolnym miejscu pod przerwą między kartami; z niego linia w dół do Witolda */
+  .sch-plus{top:auto;bottom:16px;width:32px;height:32px;margin:0 0 -16px -16px;font-size:21px;line-height:28px}
+  .sch-para::after{top:auto;bottom:-26px;height:42px}
+  .sch-dziecko{padding-top:26px}
+  .sch-syn{padding:14px 14px;width:100%}
+  .sch-syn b{font-size:21px}
+  .sch-ur{font-size:16px}
+}
+@media (max-width:560px){
+  /* węższa kolumna Salmonowiczów, szersza Jaxa-Bąkowskich: nazwiska mieszczą się w 2 liniach */
+  .sch{--g:12px;--c1:4.8;--c2:3.4286;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);margin-top:24px}
+  .sch-para{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+  .sch-rod{font-size:16px;padding:10px 6px}
+  .sch-rod img{height:46px}
+  .sch-os{padding:10px 7px}
+  .sch-os b{font-size:17px}
+  .sch-rodzice{padding:10px 8px}
+}
