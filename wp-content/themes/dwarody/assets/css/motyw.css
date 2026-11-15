@@ -59,7 +59,7 @@ p{margin:0 0 1em}
 .menu .m-pod a:hover{background:var(--tlo-szare);color:var(--czerwien)}
 .menu .m-pod .m-teraz>a{color:var(--czerwien);font-weight:600;box-shadow:inset 3px 0 0 var(--czerwien)}
 .menu .m-pod .m-grupa{font-weight:600;color:var(--szary);font-size:15px;padding-top:12px}
-.menu .m-pod .m-pod{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;padding:0;min-width:0}
+.menu .m-pod .m-pod{position:static;opacity:1;visibility:inherit;transform:none;box-shadow:none;border:0;padding:0;min-width:0}
 .menu .m-pod .m-pod a{padding-left:34px}
 .menu .m-lista>.m-el:last-child>.m-pod,.menu .m-lista>.m-el:nth-last-child(2)>.m-pod{left:auto;right:0}
 .burger{display:none;width:48px;height:48px;border:0;background:none;padding:11px;cursor:pointer;flex:none}
