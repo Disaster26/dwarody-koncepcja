@@ -644,3 +644,49 @@ body:not(.strona-drzewo) .glowka .wrap{width:min(var(--oryg-kolumna),100% - 40px
 /* drzewo z RTF: kolory autora (czarny / czerwony #FF0000 / niebieski) mają znaczenie, więc imię z biogramem zostaje w kolorze wiersza; bez podkreślenia (uwaga autora 16.11), podkreślenie dopiero po najechaniu / fokusie */
 .tresc .dr-dok.dok-drzewo a{color:inherit;text-decoration:none}
 .tresc .dr-dok.dok-drzewo a:hover,.tresc .dr-dok.dok-drzewo a:focus-visible{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+/* ================================================================ v1.4.4 (20.11.2026): strona główna wg dotychczasowej dwarody.pl
+   herby razem z nazwiskami rodów (jak w nagłówku starej strony), zakładki obu rodów z menu, tekst "O mnie i o stronie" */
+.start-rody{padding:44px 0 40px}
+.start-rody .start-in{max-width:var(--oryg-kolumna)}
+.start-rody .start-herby{justify-content:space-between;gap:clamp(16px,3vw,40px)}
+.start-rody .start-herb{flex-direction:row;align-items:center;gap:14px;flex:1 1 0;min-width:0}
+.start-rody .start-herb-p{justify-content:flex-end}
+.start-rody .start-herb img{height:clamp(96px,9vw,128px)}
+.start-rody .start-herb figcaption{font:600 clamp(18px,1.7vw,22px)/1.3 var(--serif);color:var(--atrament);text-align:left;letter-spacing:.01em}
+.start-rody .start-tytul{flex:none}
+.start-rody h1{font-size:clamp(40px,5vw,64px)}
+.zakladki{background:#fff;border-bottom:1px solid var(--linia);padding:34px 0 38px}
+.zakladki-in{width:min(var(--oryg-kolumna),100% - 40px);display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;align-items:start}
+.zakl-rod{border:1px solid var(--linia);border-top:4px solid var(--czerwien);border-radius:6px;padding:20px 24px 16px;background:#fff}
+.zakl-gryf{border-top-color:var(--granat)}
+.zakl-tytul{display:flex;align-items:center;gap:14px;margin:0 0 12px;font:700 21px/1.25 var(--serif);color:var(--granat)}
+.zakl-tytul img{height:58px;width:auto;flex:none}
+.zakl-lista,.zakl-lista ul{list-style:none;margin:0;padding:0}
+.zakl-szaszor .zakl-lista{columns:2;column-gap:28px}
+.zakl-lista li{break-inside:avoid}
+.zakl-lista>li{padding:2px 0}
+.zakl-lista a{display:inline-block;padding:5px 0;font:600 16px/1.35 var(--sans);color:var(--atrament);text-decoration:none}
+.zakl-lista a:hover,.zakl-lista a:focus-visible{color:var(--czerwien);text-decoration:underline;text-underline-offset:3px}
+.zakl-grupa{margin:4px 0 6px}
+.zakl-grupa-nazwa{display:block;font:700 13px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--szary);padding:6px 0 2px}
+.zakl-grupa-nazwa a{font:inherit;color:inherit;padding:0}
+.zakl-grupa ul{border-left:2px solid var(--linia);padding-left:12px}
+.zakl-grupa ul a{font-weight:400}
+.omnie-tytul{font:700 clamp(26px,2.4vw,32px)/1.25 var(--serif);color:var(--granat);margin:0 0 18px}
+.glowna .omnie{padding:36px 0 48px}
+@media (max-width:860px){
+  .zakladki-in{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .start-rody{padding:28px 0 26px}
+  .start-rody .start-herby{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px}
+  .start-rody .start-tytul{grid-column:1 / -1;order:-1}
+  .start-rody .start-herb{flex-direction:column;justify-content:flex-start;gap:8px;text-align:center}
+  .start-rody .start-herb-p{justify-content:flex-start}
+  .start-rody .start-herb img{height:92px}
+  .start-rody .start-herb figcaption{text-align:center;font-size:17px}
+  .zakl-szaszor .zakl-lista{columns:1}
+  .zakl-rod{padding:16px 16px 12px}
+  .zakl-lista a{padding:7px 0}
+}
+.start.start-rody{min-height:0;display:block}
